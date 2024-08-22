@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Index</title>
+    <style>
+        body{
+            background-image: url("/images/23614.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<div class="centered-content">
+    <div class="center-content">
+        <h1>Hill Cipher</h1>
+        <div class="container">
+            <div class="center-content">
+                <a th:href="@{/login}" class="button">Login</a>
+                <br><br>
+                <a th:href="@{/register}" class="button">Register</a>
+                <br><br>
+                <a th:href="@{/verifyOTP}" class="button">OTP VERIFICATION</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

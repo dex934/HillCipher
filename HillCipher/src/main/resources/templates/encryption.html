@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Encryption</title>
+    <style>
+        body {
+            background-image: url("/images/23614.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 600px; /* Adjust the max-width as needed */
+            overflow: auto; /* Enable overflow scrolling if the content exceeds the container width */
+        }
+    </style>
+</head>
+<body>
+<div class="centered-content">
+    <div class="center-content">
+        <h1>Encryption</h1>
+        <div class="container">
+            <form id="encryptForm" action="/encrypt" method="post">
+                <label for="plaintext">Enter Plain Text:</label><br>
+                <input type="text" id="plaintext" name="plaintext"><br><br>
+                <button type="submit">Encrypt</button>
+            </form><br>
+            <div th:if="${showResult}">
+                <h3>Encrypted Text:</h3><br>
+                <p th:text="${encryptedText}"></p><br>
+                <h3>Key Matrix:</h3><br>
+                <p th:text="${keyMatrixString}"></p><br>
+            </div><br>
+            <div class="form-group">
+                <a href="/home" class="button">Back to Home Page</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

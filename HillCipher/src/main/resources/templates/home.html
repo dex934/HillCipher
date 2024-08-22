@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Home</title>
+    <style>
+        body{
+            background-image: url("/images/23614.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .centered-content {
+            position: relative;
+            padding-top: 50px; /* Add padding to accommodate logout button */
+        }
+        .logout-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="centered-content">
+    <form th:action="@{/logout}" method="post" class="logout-button">
+        <button type="submit" class="button">Logout</button>
+    </form>
+    <div class="center-content">
+        <h1>Welcome to Hill Cipher Encryption/Decryption</h1>
+        <a href="/encryption" class="button">Encryption</a>
+        <br><br>
+        <a href="/decryption" class="button">Decryption</a>
+    </div>
+</div>
+</body>
+</html>

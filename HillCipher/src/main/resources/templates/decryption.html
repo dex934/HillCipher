@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Decryption</title>
+  <style>
+    body{
+      background-image: url("/images/23614.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+<div class="centered-content">
+  <div class="center-content">
+    <h1>Decryption</h1>
+    <div class="container">
+      <form id="decryptForm" action="/decrypt" method="post">
+        <label for="encryptedText">Enter Encrypted Text:</label><br>
+        <input type="text" id="encryptedText" name="encryptedText"><br><br>
+        <label for="keyMatrix">Enter Key Matrix:</label><br>
+        <input type="text" id="keyMatrix" name="keyMatrix"><br><br>
+        <button type="submit">Decrypt</button>
+      </form>
+      <br>
+      <div th:if="${showResult}"><br>
+        <h3>Decrypted Text:</h3><br>
+        <p th:text="${decryptedText}"></p><br>
+      </div><br>
+      <div class="form-group">
+        <a href="/home" class="button">Back to Home Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

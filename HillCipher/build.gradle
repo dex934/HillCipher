@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.5.4'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity4'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    implementation 'mysql:mysql-connector-java:8.0.33' // Or the version you're using
+    implementation 'org.springframework.security:spring-security-core:5.6.10'
+    implementation 'org.springframework.security:spring-security-config:5.5.0'
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+    implementation 'org.ejml:ejml-core:0.43.1'
+    implementation 'org.ejml:ejml-ddense:0.43.1'
+    implementation 'org.ejml:ejml-simple:0.43.1'
+    implementation 'javax.persistence:javax.persistence-api:2.2'
+    implementation 'com.sun.mail:javax.mail:1.6.2' // Add JavaMail API dependency
+    implementation 'org.springframework.boot:spring-boot-starter-mail' // Add Spring Boot Mail starter
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.mockito:mockito-core:3.6.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.4'
+    testImplementation 'org.springframework.security:spring-security-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

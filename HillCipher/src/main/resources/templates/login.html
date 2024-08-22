@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>Login</title>
+	<style>
+		body {
+			background-image: url("/images/23614.png");
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="centered-content">
+		<div class="center-content">
+			<h1>Login</h1>
+			<div class="container">
+				<form id="loginForm" action="#" th:action="@{/login}" method="post" onsubmit="return validateForm()">
+					<label for="username">Username:</label><br>
+					<input type="text" id="username" name="username"><br>
+					<label for="password">Password:</label><br>
+					<input type="password" id="password" name="password"><br>
+					<button type="submit">Login</button>
+				</form>
+				<br><br>
+				<div class="form-group">
+					<p>New user? <a href="/register">Register here</a>.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function validateForm() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+			// Check if username is empty
+			if (username.trim() === "") {
+				alert("Please enter your username.");
+				return false; // Prevent form submission
+			}
+
+			// Check if password is empty
+			if (password.trim() === "") {
+				alert("Please enter your password.");
+				return false; // Prevent form submission
+			}
+
+			// If all validations pass, allow form submission
+			return true;
+		}
+	</script>
+
+</body>
+
+</html>

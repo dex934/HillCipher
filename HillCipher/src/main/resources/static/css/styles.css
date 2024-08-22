@@ -1,0 +1,104 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Palatino Linotype", sans-serif;
+    background-image: url("/images/23614.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white; /* Set default text color to white */
+}
+
+.centered-content {
+    position: relative; /* Make it a relative positioning context */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.07); /* Adjust opacity for glass morphism effect */
+    border-radius: 20px;
+    padding: 60px; /* Increased padding for a larger container */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Adjust shadow for glass morphism effect */
+    backdrop-filter: blur(4px); /* Add blurry effect */
+    width: 500px; /* Increased width for a larger container */
+}
+
+.center-content {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"],
+input[type="submit"],
+a.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover,
+a.button:hover {
+    background-color: #45a049;
+}
+
+.form-group {
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.form-group p {
+    color: white; /* Set text color to white */
+}
+
+.form-group a {
+    display: inline-block;
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 6px; /* Button border radius */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.form-group a:hover {
+    background-color: #45a049; /* Button background color on hover */
+}
+
+/* Position the logout button */
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
